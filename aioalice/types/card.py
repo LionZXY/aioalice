@@ -1,10 +1,11 @@
 from attr import attrs, attrib
 
-from aioalice.utils import ensure_cls
+from aioalice.utils import ensure_cls, safe_kwargs
 from aioalice.utils.helper import Helper, HelperMode, Item
 from . import AliceObject, MediaButton, Image, CardHeader, CardFooter
 
 
+@safe_kwargs
 @attrs
 class Card(AliceObject):
     """This object represents a Card either of type `BigImage` or `ItemsList`"""

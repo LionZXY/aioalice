@@ -1,8 +1,10 @@
 from attr import attrs, attrib
-from aioalice.utils import ensure_cls
+
+from aioalice.utils import ensure_cls, safe_kwargs
 from . import AliceObject, BaseSession, Response
 
 
+@safe_kwargs
 @attrs
 class AliceResponse(AliceObject):
     """AliceResponse is a response to Alice API"""

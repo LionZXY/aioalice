@@ -1,13 +1,15 @@
 import logging
+
 from attr import attrs, attrib
 
-from aioalice.utils import ensure_cls
+from aioalice.utils import ensure_cls, safe_kwargs
 from aioalice.utils.helper import Helper, HelperMode, Item
 from . import AliceObject, EntityTokens, EntityValue
 
 log = logging.getLogger(__name__)
 
 
+@safe_kwargs
 @attrs
 class Entity(AliceObject):
     """Entity object"""

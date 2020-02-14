@@ -1,7 +1,10 @@
 from attr import attrs, attrib
+
 from . import AliceObject
+from ..utils import safe_kwargs
 
 
+@safe_kwargs
 @attrs
 class BaseSession(AliceObject):
     """Base Session object"""
@@ -10,6 +13,7 @@ class BaseSession(AliceObject):
     user_id = attrib(type=str)
 
 
+@safe_kwargs
 @attrs
 class Session(BaseSession):
     """Session object"""

@@ -1,8 +1,10 @@
 from attr import attrs, attrib
-from aioalice.utils import ensure_cls
+
+from aioalice.utils import ensure_cls, safe_kwargs
 from . import AliceObject, Card, Button
 
 
+@safe_kwargs
 @attrs
 class Response(AliceObject):
     """Response object"""
